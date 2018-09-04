@@ -13,6 +13,8 @@
 		FF38CDAC2139672500F81989 /* JustDoIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF38CDAA2139672500F81989 /* JustDoIt.xcdatamodeld */; };
 		FF38CDAE2139672500F81989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF38CDAD2139672500F81989 /* Assets.xcassets */; };
 		FF38CDB12139672500F81989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF38CDAF2139672500F81989 /* LaunchScreen.storyboard */; };
+		FF38CDB921397A6D00F81989 /* DoItTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38CDB821397A6D00F81989 /* DoItTask.swift */; };
+		FF38CDBB213D650300F81989 /* CreateToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38CDBA213D650300F81989 /* CreateToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FF38CDAD2139672500F81989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF38CDB02139672500F81989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF38CDB22139672500F81989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF38CDB821397A6D00F81989 /* DoItTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoItTask.swift; sourceTree = "<group>"; };
+		FF38CDBA213D650300F81989 /* CreateToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +63,12 @@
 				FF38CDA32139672400F81989 /* AppDelegate.swift */,
 				FF38CDA52139672500F81989 /* ViewController.swift */,
 				FF38CDA72139672500F81989 /* Main.storyboard */,
+				FF38CDBA213D650300F81989 /* CreateToDoViewController.swift */,
 				FF38CDAD2139672500F81989 /* Assets.xcassets */,
 				FF38CDAF2139672500F81989 /* LaunchScreen.storyboard */,
 				FF38CDB22139672500F81989 /* Info.plist */,
 				FF38CDAA2139672500F81989 /* JustDoIt.xcdatamodeld */,
+				FF38CDB821397A6D00F81989 /* DoItTask.swift */,
 			);
 			path = JustDoIt;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF38CDB921397A6D00F81989 /* DoItTask.swift in Sources */,
 				FF38CDAC2139672500F81989 /* JustDoIt.xcdatamodeld in Sources */,
+				FF38CDBB213D650300F81989 /* CreateToDoViewController.swift in Sources */,
 				FF38CDA62139672500F81989 /* ViewController.swift in Sources */,
 				FF38CDA42139672400F81989 /* AppDelegate.swift in Sources */,
 			);
