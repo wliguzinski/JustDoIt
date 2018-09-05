@@ -41,6 +41,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let task = tasks[indexPath.row]
+        performSegue(withIdentifier: "deleteSegue", sender: task)
+    }
+    
     func makeTasks() -> [DoItTask] {
         let task1 = DoItTask()
         task1.name = "Walk the dog"
@@ -62,8 +67,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextViewController = segue.destination as! CreateToDoViewController
+        
+        let nextViewController = segue.destination as! BaseReturnViewController
         nextViewController.previousViewController = self
+        
+        if segue.identifier == "deleteSegue" {
+            let delViewController = segue.destination as! DeleteViewController
+            delViewController.doItTask = sender as? DoItTask
+        }
     }
 }
 

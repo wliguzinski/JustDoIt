@@ -1,18 +1,16 @@
 //
-//  CreateToDoViewController.swift
+//  BaseReturnViewController.swift
 //  JustDoIt
 //
-//  Created by woli on 03.09.2018.
+//  Created by woli on 05.09.2018.
 //  Copyright © 2018 woli. All rights reserved.
 //
 
 import UIKit
 
-class CreateToDoViewController: BaseReturnViewController {
+class BaseReturnViewController: UIViewController {
     
-    @IBOutlet weak var taskNameTextField: UITextField!
-    
-    @IBOutlet weak var taskImportanceSwitch: UISwitch!
+    var previousViewController = ViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,18 +24,6 @@ class CreateToDoViewController: BaseReturnViewController {
     }
     
 
-    @IBAction func addTapped(_ sender: Any) {
-        // Create a task from the outlet information
-        
-        let task = DoItTask()
-        task.name = taskNameTextField.text!
-        task.importance = taskImportanceSwitch.isOn
-        
-        // Add new task to array in previous viewController
-        previousViewController.tasks.append(task)
-        previousViewController.tableView.reloadData()
-        navigationController?.popViewController(animated: true)
-    }
     /*
     // MARK: - Navigation
 

@@ -1,23 +1,24 @@
 //
-//  CreateToDoViewController.swift
+//  DeleteViewController.swift
 //  JustDoIt
 //
-//  Created by woli on 03.09.2018.
+//  Created by woli on 05.09.2018.
 //  Copyright © 2018 woli. All rights reserved.
 //
 
 import UIKit
 
-class CreateToDoViewController: BaseReturnViewController {
+class DeleteViewController: BaseReturnViewController {
+
+    var doItTask : DoItTask? = nil
     
-    @IBOutlet weak var taskNameTextField: UITextField!
-    
-    @IBOutlet weak var taskImportanceSwitch: UISwitch!
+    @IBOutlet weak var taskNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        taskNameLabel.text = doItTask?.name
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,19 +26,21 @@ class CreateToDoViewController: BaseReturnViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func addTapped(_ sender: Any) {
-        // Create a task from the outlet information
+    // predicate function for items
+    func taskPredicate(task: DoItTask) -> Bool {
+        return task.name == doItTask!.name
+    }
+    
+    @IBAction func completeTapped(_ sender: Any) {
+        //if let index = previousViewController.tasks.index(where: taskPredicate)
+        if let index = previousViewController.tasks.index(where: { $0.name == doItTask?.name }) {
+            previousViewController.tasks.remove(at: index)
+        }
         
-        let task = DoItTask()
-        task.name = taskNameTextField.text!
-        task.importance = taskImportanceSwitch.isOn
-        
-        // Add new task to array in previous viewController
-        previousViewController.tasks.append(task)
         previousViewController.tableView.reloadData()
         navigationController?.popViewController(animated: true)
     }
+    
     /*
     // MARK: - Navigation
 

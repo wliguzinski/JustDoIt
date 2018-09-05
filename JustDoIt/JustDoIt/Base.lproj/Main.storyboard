@@ -43,11 +43,51 @@
                     <connections>
                         <outlet property="tableView" destination="ohR-mP-Dar" id="M2L-g6-TsF"/>
                         <segue destination="8ud-qz-QtA" kind="show" identifier="addSegue" id="uob-QZ-zaP"/>
+                        <segue destination="IEo-fh-kOD" kind="show" identifier="deleteSegue" id="BpO-yx-QRb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="32.833583208395808"/>
+        </scene>
+        <!--Delete View Controller-->
+        <scene sceneID="NdI-WT-hgq">
+            <objects>
+                <viewController id="IEo-fh-kOD" customClass="DeleteViewController" customModule="JustDoIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sb1-hP-7jT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6G-vC-P3u">
+                                <rect key="frame" x="157.5" y="94" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTR-q4-lzT">
+                                <rect key="frame" x="154.5" y="174" width="67" height="30"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="completeTapped:" destination="IEo-fh-kOD" eventType="touchUpInside" id="ke1-X3-qVM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uTR-q4-lzT" firstAttribute="centerX" secondItem="Sb1-hP-7jT" secondAttribute="centerX" id="31V-IC-ZcK"/>
+                            <constraint firstItem="c6G-vC-P3u" firstAttribute="centerX" secondItem="Sb1-hP-7jT" secondAttribute="centerX" id="r7F-W7-Jqf"/>
+                            <constraint firstItem="uTR-q4-lzT" firstAttribute="top" secondItem="c6G-vC-P3u" secondAttribute="bottom" constant="50" id="uhf-O2-p5S"/>
+                            <constraint firstItem="c6G-vC-P3u" firstAttribute="top" secondItem="vKu-1z-iNX" secondAttribute="top" constant="30" id="zcb-gu-NId"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vKu-1z-iNX"/>
+                    </view>
+                    <connections>
+                        <outlet property="taskNameLabel" destination="c6G-vC-P3u" id="Sdd-Yx-3bL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gDz-hi-gJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975" y="769"/>
         </scene>
         <!--Create To Do View Controller-->
         <scene sceneID="wdn-cL-HEb">
